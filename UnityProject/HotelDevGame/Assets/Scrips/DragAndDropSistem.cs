@@ -4,61 +4,48 @@ using UnityEngine;
 
 public class DragAndDropSistem : MonoBehaviour
 {
-    private bool clicking = false;
-    public bool buildingMode = false;
+        public bool clicking = false;
+        public bool buildingMode = true;
 
 
-    #region ShopDragSistem
+        #region ShopDragSistem
 
-    private void OnMouseDown()
-    {
-        if (clicking)
+        private void OnMouseDown()
         {
-            clicking = false;
-        }
-        else
-        {
-            clicking = true;
-        }
-        
-    }
-
-    public void  SwitchBuildingSistem()
-    {
-        if (buildingMode)
-        {
-            buildingMode = false;
-        }
-        else
-        {
-            buildingMode = true; 
-        }
-    }
-
-     private void Update()
-    {
-        if (clicking)
-        {
-            if (buildingMode)
+            if (clicking)
             {
-                transform.position = mouseWorldPos();
+                clicking = false;
             }
-            
+            else
+            {
+                clicking = true;
+            }
+        
         }
+         private void Update()
+        {
+            if (clicking)
+            {
+                if (buildingMode)
+                {
+                    transform.position = mouseWorldPos();
+                }
+            
+            }
         
-    }
+        }
 
-    private void OnMouseDrag()
-    {
+        private void OnMouseDrag()
+        {
         
-    }
+        }
 
-    private Vector3 mouseWorldPos()
-    {
-        Vector3 mpos = Input.mousePosition;
-        mpos.z = Camera.main.WorldToScreenPoint(transform.position).z;
-        return Camera.main.ScreenToWorldPoint(mpos);
-    }
+        private Vector3 mouseWorldPos()
+        {
+            Vector3 mpos = Input.mousePosition;
+            mpos.z = Camera.main.WorldToScreenPoint(transform.position).z;
+            return Camera.main.ScreenToWorldPoint(mpos);
+        }
 
-    #endregion
+        #endregion
 }
