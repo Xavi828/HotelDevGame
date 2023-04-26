@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3423809590601103801}
-  - component: {fileID: 85560345816339555}
   - component: {fileID: 8491922099844204305}
   - component: {fileID: 1082722011081016031}
+  - component: {fileID: 1758701518330626039}
   m_Layer: 0
   m_Name: CubeObject
   m_TagString: Untagged
@@ -35,19 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &85560345816339555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2169374935892337969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98dacbafadb889141b4140d98de79793, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsGrid: {fileID: 0}
 --- !u!114 &8491922099844204305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfd22055e97a7f346abc4b3f3f8c1f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clicking: 0
+  buildingMode: 0
+  shopSistem: {fileID: 0}
 --- !u!60 &1082722011081016031
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -109,6 +99,24 @@ PolygonCollider2D:
       - {x: 0, y: -0.5}
       - {x: -1, y: 0}
   m_UseDelaunayMesh: 0
+--- !u!114 &1758701518330626039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2169374935892337969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7c2d3e1577bf274a9ff977d58585e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: TestCube
+  objectImage: {fileID: 0}
+  dimensions: {x: 1, y: 1}
+  isSolid: 1
+  objectType: 2
+  objectColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7513736011429682437
 GameObject:
   m_ObjectHideFlags: 0
