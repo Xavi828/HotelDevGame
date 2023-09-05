@@ -384,6 +384,7 @@
 "Assets/Scrips/EconomySistem/ConstructionPrice.cs"
 "Assets/Scrips/HUDManager/GameHUD.cs"
 "Assets/Scrips/MouseControler.cs"
+"Assets/Scrips/NPC/NPCDataBase.cs"
 "Assets/Scrips/ObjectData.cs"
 "Assets/Scrips/ShopSistem.cs"
 "Assets/Scrips/SnapSistem.cs"

@@ -18,7 +18,6 @@ public class ConstructionPrice : MonoBehaviour
     private void Start()
     {
         managerGameObject = GameObject.Find("Manager");
-        objectsTypeLists = managerGameObject.GetComponent<ShopSistem>().typeObjectsList;
         budgetSistem = managerGameObject.GetComponent<BudgetSistem>();
         walletMoney = budgetSistem.walletMoney;
         
@@ -26,13 +25,19 @@ public class ConstructionPrice : MonoBehaviour
 
     public void PriceCollector(int i, int e)
     {
-        objectsList.Clear();
+        Debug.Log("i=" + i + "e" + e);
+
         objectsList = objectsTypeLists[i];
+
+        Debug.Log(objectsTypeLists.Count + " " + objectsList.Count);
 
         priceToPay = objectsList[e].GetComponent<ObjectData>().objectPrice;
 
         walletMoney -= priceToPay;
         budgetSistem.walletMoney = walletMoney;
+
+        objectsList.Clear();
+        Debug.Log(objectsTypeLists.Count + " " + objectsList.Count);
     }
 
 }

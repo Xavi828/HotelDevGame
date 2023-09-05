@@ -117,6 +117,7 @@ MonoBehaviour:
   isSolid: 1
   objectType: 2
   objectColor: {r: 0, g: 0, b: 0, a: 0}
+  objectPrice: 0
 --- !u!1 &7513736011429682437
 GameObject:
   m_ObjectHideFlags: 0
